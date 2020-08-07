@@ -22,12 +22,3 @@ target 'Twilight' do
     flipper_post_install(installer)
   end
 end
-
-target 'Twilight-tvOS' do
-  # Pods for Twilight-tvOS
-
-  target 'Twilight-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end

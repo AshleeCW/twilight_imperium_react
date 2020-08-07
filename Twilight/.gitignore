@@ -2,10 +2,6 @@
 #
 .DS_Store
 
-#gen
-
-/gen
-
 # Xcode
 #
 build/
@@ -32,6 +28,10 @@ build/
 .gradle
 local.properties
 *.iml
+
+# Visual Studio Code
+#
+.vscode/
 
 # node.js
 #
