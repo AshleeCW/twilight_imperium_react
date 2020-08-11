@@ -21,6 +21,7 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import { BaseScreen } from './screens/BaseScreen';
 import LinearGradient from 'react-native-linear-gradient';
+import {TitleScreen} from "./screens/TitleScreen";
 
 
 declare const global: {HermesInternal: null | {}};
@@ -28,7 +29,8 @@ declare const global: {HermesInternal: null | {}};
 function HomeScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
+      {/*<Text>Home Screen</Text>*/}
+      <Text>Title Screen</Text>
     </View>
   );
 }
@@ -40,7 +42,8 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator headerMode={"none"}>
-        <Stack.Screen name="BaseScreen" component={BaseScreen} />
+        {/*<Stack.Screen name="BaseScreen" component={BaseScreen} />*/}
+        <Stack.Screen name="TitleScreen" component={TitleScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
