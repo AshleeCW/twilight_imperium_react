@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { StyleSheet } from 'react-native';
 import {
   Header,
@@ -15,12 +16,14 @@ export const globalStyles = StyleSheet.create({
 
 
     linearGradient: {
-        background: images.background,
+
         flex: 1,
         paddingLeft: 0,
         paddingRight: 0,
         borderRadius: 5
       },
+
+
 
      
 
