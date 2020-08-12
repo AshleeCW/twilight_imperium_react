@@ -15,6 +15,7 @@ export const images = {
 export const globalStyles = StyleSheet.create({
 
     Buttons: {
+        zIndex:5,
         width: 120,
         marginLeft: "33%",
         marginTop:90
@@ -35,10 +36,13 @@ export const globalStyles = StyleSheet.create({
         position: "relative",
         width:"100%"
 
+    },
+
+    background: {
+        zIndex:-2,
+        flex: 1,
+        resizeMode: 'cover',
     }
 
-
-
-     
 
 })

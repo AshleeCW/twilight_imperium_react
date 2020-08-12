@@ -3,16 +3,13 @@ export class RaceModel {
     id: number;
     name: string;
     homeWorld: string;
+    expansion: boolean;
 
-    constructor(
-            id: number = -1,
-            name: string = "Federation of Sol",
-            homeWorld: "Terra",
-        ) { 
+    constructor(id: number, name: string, homeWorld: string, expansion: boolean) {
         this.id = id; 
         this.name = name;
         this.homeWorld = homeWorld;
-
+        this.expansion = expansion;
     } 
 
 

@@ -10,6 +10,8 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import {TitleScreen} from "./screens/TitleScreen";
 import {CreateMenu} from "./screens/create/CreateMenu";
+import {RandomRaceOptionsScreen} from "./screens/random_race/RandomRaceOptionsScreen";
+import {RaceLoreListScreen} from "./screens/race_lore/RaceLoreListScreen";
 
 
 declare const global: {HermesInternal: null | {}};
@@ -33,6 +35,8 @@ function App() {
         {/*<Stack.Screen name="BaseScreen" component={BaseScreen} />*/}
         <Stack.Screen name="TitleScreen" component={TitleScreen} />
         <Stack.Screen name="CreateMenu" component={CreateMenu} />
+        <Stack.Screen name="RandomRaceOptionsScreen" component={RandomRaceOptionsScreen} />
+        <Stack.Screen name="RaceLoreListScreen" component={RaceLoreListScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
