@@ -1,8 +1,19 @@
 import React from 'react';
-import { Text } from 'react-native';
+import {Text, TextInput, View} from 'react-native';
 
-const Random_Race_Form = () => {
-    return <Text>I am FORM</Text>;
+// @ts-ignore
+const Random_Race_Form = ({ fields }) => {
+    const fieldKeys = Object.keys(fields);
+
+    return fieldKeys.map((key) => {
+        const field = fields[key];
+        return (
+            <View key={key}>
+                <Text>{field.label}</Text>
+                <TextInput {...field.inputProps} />
+            </View>
+        );
+    });
 };
 
 export default Random_Race_Form;

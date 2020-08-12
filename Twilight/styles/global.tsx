@@ -11,6 +11,13 @@ export const images = {
     background: require('../assets/space_background_reduced.png'),
     
   };
+export const backs = StyleSheet.create({
+    testBacks: {
+        backgroundColor:"yellow"
+    }
+
+})
+
 
 export const globalStyles = StyleSheet.create({
 
@@ -43,6 +50,5 @@ export const globalStyles = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover',
     }
-
 
 })
