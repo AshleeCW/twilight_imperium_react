@@ -1,0 +1,127 @@
+{
+  "race": {
+    "the_winnu": {
+      "homeworld": {
+        "name": "Winnu",
+        "gold": 3,
+        "influence": 4
+      },
+      "commodities": 3,
+      "starting_tech": {
+        "colour": "any",
+        "name": "Any base technology"
+      },
+      "faction_ability": {
+        "Blood Ties": "You do not have to spend influence to remove the custodians token from Mecatol Rex.",
+        "Reclamation": "After you resolve a tactical action during which you gained control of Mecatol Rex, you may place 1 PDS and 1 space dock from your reinforcements on Mecatol Rex."
+      },
+      "promissory_note": {
+        "name": "Acquiescence",
+        "ability" : "Exchange 1 of your strategy cards with a strategy card that was chosen by the Winnu player.\nThen, return this card to the Winnu player."
+      },
+      "flagship": "Salai Sai Corian"
+    },
+
+    "the_arborec": {
+      "homeworld": {
+        "name": "Farruban",
+        "gold": 3,
+        "influence": 2
+      },
+      "commodities": 3,
+      "starting_tech": {
+        "colour": "red",
+        "name": "Magen Defense Grid"
+      },
+      "faction_ability": {
+        "Mitosis": "Your space docks cannot produce infantry.  At the start of the status phase , place 1 infantry from your reinforcements on any planet you control."
+      },
+      "promissory_note": {
+        "name" : "Stymie",
+        "ability" : "ACTION: While this card is in your play area, the Arborec player cannot produce units in or adjacent to non-home systems that contain 1 or more of your units.\nIf you activate a system that contains 1 or more of the Arborec player's units, return this card to the Arborec player."
+      },
+      "flagship": "Duha Menaimon"
+    },
+
+    "the_yin_brotherhood" : {
+      "homeworld": {
+        "name": "Lael",
+        "gold": 4,
+        "influence": 4
+      },
+      "commodities": 2,
+      "starting_tech": {
+        "colour": "yellow",
+        "name": "Sarween Tools"
+      },
+      "faction_ability": {
+        "Indoctrination" : "At the start of a ground combat, you may spend 2 influence to replace 1 of your opponent's participating infantry with 1 infantry from your reinforcements.",
+        "Devotion" : "After each space battle round, you may destroy 1 of your cruisers or destroyers in the active system to produce 1 hit and assign it to 1 of your opponent's ships in that system."
+      },
+      "promissory_note": {
+        "name" : "Greyfire Mutagen",
+        "ability" : "The Yin player cannot use faction abilities or faction technology during this tactical action.\nThen, return this card to the Yin player."
+      },
+      "flagship": "Van Hauge"
+
+    },
+
+    "the_barony_of_letnev" : {
+      "homeworld" : {
+        "name" : "Arc Prime",
+        "gold" : 4,
+        "influence" : 0
+      },
+      "homeworld_2" : {
+        "name" : "Wren Terra",
+        "gold" : 2,
+        "influence" : 1
+      },
+      "commodities" : 2,
+      "starting_tech1" : {
+        "colour" : "blue",
+        "name" : "Antimass Deflectors"
+      },
+      "starting_tech2" : {
+        "colour" : "red",
+        "name" : "Plasma Scoring"
+      },
+      "faction_ability" : {
+        "Munitions Reserves" : "At the start of each round of space combat, you may spend 2 trade goods;  you may re-roll any number of your dice during that combat round.",
+        "Armada" : "The maximum number of non-fighter ships you can have in each system is equal to 2 more than the number of tokens in your fleet pool."
+      },
+      "promissary_note" : {
+        "name" :"War Funding",
+        "ability" : "The Letnev player loses 2 trade goods.\nDuring this combat round, re-roll any number of your dice.\nThen, return this card to the Letnev player."
+      }
+    },
+
+    "clan_of_saar" : {
+      "homeworld" : {
+        "name" : "Lisis II",
+        "gold" : 1,
+        "influence" : 0
+      },
+      "homeworld_2" : {
+        "name" : "Ragh",
+        "gold" : 2,
+        "influence" : 1
+      },
+      "commodities" : 3,
+      "starting_tech" : {
+        "colour" : "blue",
+        "name" : "Antimass Deflectors"
+      },
+      "faction_ability" : {
+        "Scavenge" : "After you gain control of a planet, gain 1 trade good.",
+        "Nomadic" : "You can score objectives even if you do not control the planets in your home system."
+      },
+      "promissary_note" : {
+        "name" :"Ragh's Call",
+        "ability" : "After you commit 1 or more units to land on a planet:\nRemove all of the Saar player's ground forces from that planet and place them on a planet controlled by the Saar player.\nThen return this card to the Saar player."
+      }
+    }
+
+
+  }
+}

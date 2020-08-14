@@ -32,7 +32,7 @@ export function RandomRaceOptionsScreen({navigation: navigation}) {
 
             </Random_Race_Form>
                 <CheckBox title="Yes" style={globalStyles.CheckBox}  checked={IsUsingPoK} onPress={() => setIsUsingProphecyOfKings(true)} testID="isPoKCheck"/>
-                <CheckBox style={globalStyles.CheckBox} title='No' checked={!IsUsingPoK} onPress={() => setIsUsingProphecyOfKings(false)} testID="isNotLFGCheck"/>
+                <CheckBox style={globalStyles.CheckBox} title='No' checked={!IsUsingPoK} onPress={() => setIsUsingProphecyOfKings(false)} testID="isNotPokCheck"/>
 
 
                     <Button title={"Okay"} onPress={useState}/>
