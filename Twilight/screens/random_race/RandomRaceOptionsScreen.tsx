@@ -1,45 +1,50 @@
 import {BaseScreen} from "./../BaseScreen";
-import {Button, Image, ImageBackground, View} from "react-native";
+import {Button, Image, ImageBackground, Text, TextInput, View} from "react-native";
 import React, {useState} from "react";
 import {backs, globalStyles} from "../../styles/global";
 import Random_Race_Form from "../../components/random_race_form";
 import CheckBox from "@react-native-community/checkbox";
+import PropTypes from "prop-types";
 
 // @ts-ignore
-export function RandomRaceOptionsScreen({navigation: navigation}) {
-    const [IsUsingPoK, setIsUsingPoK] = useState(false);
+export function RandomRaceOptionsScreen({route, navigation: navigation}) {
+    const [numberOfPlayers, setNumberOfPlayers] = useState("");
+    const [pokExpansion, setPoKExpansion] = useState(false);
+
+    function print_to_console(){
+        console.log(numberOfPlayers.toString());
+        console.log(pokExpansion.toString());
+    };
+
+    const loadRandomRaces = () => {
+        //print_to_console()
+        navigation.navigate('RandomRaceScreen', {numberOfPlayers, pokExpansion});
+    };
+
+    Random_Race_Form.prototype = {
+        onConfirm: PropTypes.func.isRequired,
+    };
 
 
-    const setIsUsingProphecyOfKings = (state: boolean) => {
-        if (state === IsUsingPoK) {
-            return;
-        }
-        setIsUsingPoK(state);
-    }
     return (
         <ImageBackground source={require('../../assets/space_background_reduced_v1.png')} style={globalStyles.background}>
-            <View style={globalStyles.RandomRaceForm}>
-            <Random_Race_Form fields={{
-                number_of_players: {
-                    label: 'Number of Players',
-                    inputProps: {
-                        keyboardType: 'numeric',
-                    },
-                }
-            }}>
+
+        <View style={globalStyles.RandomRaceForm}>
+            <Text>How many players?</Text>
+            <TextInput keyboardType={"numeric"} onChangeText={(text) => setNumberOfPlayers(text)}/>
+            <Text>Prophecy of Kings Expansion?</Text>
+            <CheckBox title="Using Expansion" style={globalStyles.CheckBox} value={pokExpansion} onValueChange={setPoKExpansion}
+                      testID="isExpansionCheck"/>
+
+
+            <Button title={"Okay"} onPress={loadRandomRaces}/>
 
 
 
-            </Random_Race_Form>
-                <CheckBox title="Yes" style={globalStyles.CheckBox}  checked={IsUsingPoK} onPress={() => setIsUsingProphecyOfKings(true)} testID="isPoKCheck"/>
-                <CheckBox style={globalStyles.CheckBox} title='No' checked={!IsUsingPoK} onPress={() => setIsUsingProphecyOfKings(false)} testID="isNotPokCheck"/>
+        </View>
+</ImageBackground>
+    );
+
+};
 
 
-                    <Button title={"Okay"} onPress={useState}/>
-                </View>
-
-
-        </ImageBackground>
-
-    )
-}
