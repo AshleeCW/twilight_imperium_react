@@ -9,10 +9,33 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 export const images = {
     background: require('../assets/space_background_reduced.png'),
-    
+
   };
+export const backs = StyleSheet.create({
+    testBacks: {
+        backgroundColor:"yellow",
+        width:"90%",
+        alignSelf: "center",
+        top: 20
+    }
+
+})
+
 
 export const globalStyles = StyleSheet.create({
+    CheckBox: {
+        color:"black",
+        margin: 10,
+        flexGrow: 1,
+        height: 100,
+    },
+
+    RandomRaceForm: {
+        backgroundColor:"#e0e0e0",
+        width:"90%",
+        alignSelf: "center",
+        top: 20
+    },
 
     Buttons: {
         zIndex:5,
@@ -43,6 +66,5 @@ export const globalStyles = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover',
     }
-
 
 })

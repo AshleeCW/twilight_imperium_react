@@ -6,7 +6,6 @@ import {globalStyles} from "../styles/global";
 // @ts-ignore
 export function TitleScreen({navigation: navigation}) {
     return (
-
             <ImageBackground source={require('../assets/space_background_reduced_v1.png')} style={globalStyles.background}>
             <Image source = {require('../assets/logo.png')} style={globalStyles.logo}/>
             <View style={globalStyles.Buttons}>
