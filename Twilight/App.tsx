@@ -8,10 +8,11 @@ import {
   Text,
 } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import {TitleScreen} from "./screens/TitleScreen";
-import {CreateMenu} from "./screens/create/CreateMenu";
-import {RandomRaceOptionsScreen} from "./screens/random_race/RandomRaceOptionsScreen";
-import {RaceLoreListScreen} from "./screens/race_lore/RaceLoreListScreen";
+import {TitleScreen} from './screens/TitleScreen';
+import {CreateMenu} from './screens/create/CreateMenu';
+import {RandomRaceOptionsScreen} from './screens/random_race/RandomRaceOptionsScreen';
+import {RaceLoreListScreen} from './screens/race_lore/RaceLoreListScreen';
+import { RandomRaceScreen } from './screens/random_race/RandomRaceScreen';
 
 
 declare const global: {HermesInternal: null | {}};
@@ -31,11 +32,12 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode={"none"}>
+      <Stack.Navigator headerMode={'none'}>
         {/*<Stack.Screen name="BaseScreen" component={BaseScreen} />*/}
         <Stack.Screen name="TitleScreen" component={TitleScreen} />
         <Stack.Screen name="CreateMenu" component={CreateMenu} />
         <Stack.Screen name="RandomRaceOptionsScreen" component={RandomRaceOptionsScreen} />
+        <Stack.Screen name="RandomRaceScreen" component={RandomRaceScreen} />
         <Stack.Screen name="RaceLoreListScreen" component={RaceLoreListScreen} />
 
       </Stack.Navigator>

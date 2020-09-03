@@ -5,6 +5,7 @@ import {backs, globalStyles} from "../../styles/global";
 import Random_Race_Form from "../../components/random_race_form";
 import CheckBox from "@react-native-community/checkbox";
 import PropTypes from "prop-types";
+import {getCoreRaceList} from "../services/race_service";
 
 // @ts-ignore
 export function RandomRaceOptionsScreen({route, navigation: navigation}) {
@@ -15,10 +16,11 @@ export function RandomRaceOptionsScreen({route, navigation: navigation}) {
         console.log(numberOfPlayers.toString());
         console.log(pokExpansion.toString());
     };
+    console.log(getCoreRaceList());
 
     const loadRandomRaces = () => {
         //print_to_console()
-        navigation.navigate('RandomRaceScreen', {numberOfPlayers, pokExpansion});
+        navigation.navigate('RandomRaceScreen');
     };
 
     Random_Race_Form.prototype = {
