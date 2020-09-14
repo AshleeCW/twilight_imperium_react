@@ -16,7 +16,7 @@ export function RandomRaceOptionsScreen({route, navigation: navigation}) {
         console.log(numberOfPlayers.toString());
         console.log(pokExpansion.toString());
     };
-    console.log(getCoreRaceList());
+    console.log(getCoreRaceList().length);
 
     const loadRandomRaces = () => {
         //print_to_console()
