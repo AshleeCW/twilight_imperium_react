@@ -6,7 +6,7 @@ export function getCoreRaceList(): RaceModel[] {
 
   for (let i = 0; i < 5; i++) {
     raceList.push(
-      new RaceModel(races[i], races[i].name, races[i].homeworld, false),
+      new RaceModel(races[i], races[i].name, races[i].homeworld, races[i].image, false),
     );
   }
 

@@ -33,6 +33,7 @@ export function RandomRaceScreen(this: any, {navigation: navigation}) {
 
   const renderRaces = (item: unknown) => {
     return (
+
       <RaceCard
         race={item.item}
         onClick={() => {

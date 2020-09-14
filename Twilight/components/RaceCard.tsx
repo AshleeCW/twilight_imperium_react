@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Text, Button, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {RaceModel} from '../models/RaceModel';
-import {Card} from 'react-native-elements';
+import {Card, Image} from 'react-native-elements';
 
 export function RaceCard(props: any) {
   RaceCard.prototype = {
     race: PropTypes.instanceOf(RaceModel),
     onClick: PropTypes.func,
   };
+
+  const imageURL = props.race.image;
 
   const cardPressed = () => {
     props.onClick(props.invite.id);
@@ -19,6 +21,10 @@ export function RaceCard(props: any) {
       testID="inviteCard"
       onPress={cardPressed}>
       <Card testID="raceCard">
+        <Image
+          source={{uri:imageURL}}
+          style={{width: 200, height: 200}}
+        />
         <View>
           <Text style={style.text} testID="raceName">
             {props.race.name}
@@ -27,7 +33,8 @@ export function RaceCard(props: any) {
             {props.race.homeWorld.name}
           </Text>
         </View>
-        <View style={style.updateButtons} testID="inviteButtons">
+
+        <View style={style.updateButtons} testID="detailButtons">
           <Button
             title="Details"
             onPress={() => {
