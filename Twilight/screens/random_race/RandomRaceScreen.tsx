@@ -34,15 +34,12 @@ export function RandomRaceScreen(this: any, {navigation: navigation}) {
 
   const renderRaces = (item: unknown) => {
     return (
-
-
-        <RaceCard
-          race={item.item}
-          onClick={() => {
-            racePressed(item.item._groupId);
-          }}
-        />
-
+      <RaceCard
+        race={item.item}
+        onClick={() => {
+          racePressed(item.item._groupId);
+        }}
+      />
     );
   };
 
@@ -56,9 +53,7 @@ export function RandomRaceScreen(this: any, {navigation: navigation}) {
         <FlatList
           data={raceList}
           renderItem={renderRaces}
-          sliderWidth={width}
           containerCustomStyle={style.carousel}
-          contentContainerCustomStyle={style.card}
           itemWidth={width * 0.8}
           layout="default"
           removeClippedSubviews={false}

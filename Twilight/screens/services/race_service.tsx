@@ -1,5 +1,6 @@
 import {RaceModel} from '../../models/RaceModel';
 
+//Function for the vanilla races
 export function getCoreRaceList(): RaceModel[] {
   let raceList: RaceModel[] = [];
   raceList.push(
@@ -23,6 +24,26 @@ export function getCoreRaceList(): RaceModel[] {
   );
 
   return raceList;
+}
+
+export function getNumberOfRandomRaces(): {
+  // will need to take in number of players, will need a copy of the racelist depending on whether or not the expansion
+  // is being used. Then randomise this list and return array of whatever number.
+};
+
+// Function for the expansion races
+export function getPoKRaces(): RaceModel[] {
+  let raceList: RaceModel[] = [];
+}
+
+export function getRaceByID(id: number): RaceModel {
+  let raceList: RaceModel[] = getCoreRaceList();
+  for (let i = 0; i < raceList.length; i++) {
+    if (raceList[i].id === id) {
+      return raceList[i];
+    }
+  }
+  return new RaceModel(-1, 'null', 'null', '', false);
 }
 
 export function getWinnu(): RaceModel {
