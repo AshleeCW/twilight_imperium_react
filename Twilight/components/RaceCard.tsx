@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Text, Button, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {RaceModel} from '../models/RaceModel';
 import {Card, Image} from 'react-native-elements';
+import images from '../races/c'
 
 export function RaceCard(props: any) {
   RaceCard.prototype = {
@@ -10,7 +11,7 @@ export function RaceCard(props: any) {
     onClick: PropTypes.func,
   };
 
-  const imageURL = props.race.image;
+  console.log(props.race.image);
 
   const cardPressed = () => {
     props.onClick(props.invite.id);
@@ -20,27 +21,26 @@ export function RaceCard(props: any) {
       style={style.card}
       testID="inviteCard"
       onPress={cardPressed}>
+
       <Card testID="raceCard">
-        <Image
-          source={{uri:imageURL}}
-          style={{width: 200, height: 200}}
-        />
+
         <View>
+          <Image
+
+              source={props.race.image}
+              style={style.image}
+          />
           <Text style={style.text} testID="raceName">
             {props.race.name}
           </Text>
+
           <Text style={style.text} testID="raceWorld">
-            {props.race.homeWorld.name}
+            {props.race.homeWorld}
           </Text>
         </View>
 
         <View style={style.updateButtons} testID="detailButtons">
-          <Button
-            title="Details"
-            onPress={() => {
-              cardPressed();
-            }}
-          />
+
         </View>
       </Card>
     </TouchableOpacity>
@@ -48,17 +48,26 @@ export function RaceCard(props: any) {
 }
 
 const style = StyleSheet.create({
+  image: {
+    width: 100,
+    height: 100,
+  },
   card: {
+    alignSelf:"baseline",
+    width: "99.9%",
     padding: 0,
     alignContent: 'center',
   },
   text: {
-    textAlign: 'right',
+    position: "relative",
+    top: -85,
+    textAlign: "right",
     fontSize: 18,
     margin: 5,
     color: 'black',
   },
   updateButtons: {
+    position: "relative",
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'space-around',

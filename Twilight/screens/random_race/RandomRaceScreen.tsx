@@ -12,6 +12,7 @@ import races from '../../races/core_races.json';
 import {RaceCard} from '../../components/RaceCard';
 import {RaceModel} from '../../models/RaceModel';
 import {getCoreRaceList} from '../services/race_service';
+import {Image} from 'react-native-elements';
 // @ts-ignore
 export function RandomRaceScreen(this: any, {navigation: navigation}) {
   // const {numberOfPlayers} = route.params;
@@ -34,12 +35,14 @@ export function RandomRaceScreen(this: any, {navigation: navigation}) {
   const renderRaces = (item: unknown) => {
     return (
 
-      <RaceCard
-        race={item.item}
-        onClick={() => {
-          racePressed(item.item._groupId);
-        }}
-      />
+
+        <RaceCard
+          race={item.item}
+          onClick={() => {
+            racePressed(item.item._groupId);
+          }}
+        />
+
     );
   };
 
@@ -50,16 +53,16 @@ export function RandomRaceScreen(this: any, {navigation: navigation}) {
       source={require('../../assets/space_background_reduced_v1.png')}
       style={globalStyles.background}>
       <View>
-      <FlatList
-        data={raceList}
-        renderItem={renderRaces}
-        sliderWidth={width}
-        containerCustomStyle={style.carousel}
-        contentContainerCustomStyle={style.card}
-        itemWidth={width * 0.8}
-        layout="default"
-        removeClippedSubviews={false}
-      />
+        <FlatList
+          data={raceList}
+          renderItem={renderRaces}
+          sliderWidth={width}
+          containerCustomStyle={style.carousel}
+          contentContainerCustomStyle={style.card}
+          itemWidth={width * 0.8}
+          layout="default"
+          removeClippedSubviews={false}
+        />
       </View>
     </ImageBackground>
   );
