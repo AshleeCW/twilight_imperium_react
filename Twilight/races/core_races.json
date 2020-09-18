@@ -20,7 +20,7 @@
         "ability": "Exchange 1 of your strategy cards with a strategy card that was chosen by the Winnu player.\nThen, return this card to the Winnu player."
       },
       "flagship": "Salai Sai Corian",
-    "image": "./images/winnu.png"
+    "image": "require('../assets/winnu.png')"
 
   },
   "1": {
@@ -44,9 +44,7 @@
         "ability": "ACTION: While this card is in your play area, the Arborec player cannot produce units in or adjacent to non-home systems that contain 1 or more of your units.\nIf you activate a system that contains 1 or more of the Arborec player's units, return this card to the Arborec player."
       },
       "flagship": "Duha Menaimon",
-    "image": "./races/images/winnu.PNG"
-
-
+    "image": "require('../assets/winnu.png')"
   },
   "2": {
     "name" : "The Yin Brotherhood",
@@ -70,9 +68,7 @@
         "ability": "The Yin player cannot use faction abilities or faction technology during this tactical action.\nThen, return this card to the Yin player."
       },
       "flagship": "Van Hauge",
-    "image": "Twilight/races/images/winnu.PNG"
-
-
+    "image": "require('../assets/winnu.png')"
   },
 
   "3": {
@@ -107,9 +103,7 @@
       },
 
 
-    "image": "../winnu.PNG"
-
-
+    "image": "require('../assets/winnu.png')"
   },
 
   "4": {
@@ -139,9 +133,7 @@
         "ability": "After you commit 1 or more units to land on a planet:\nRemove all of the Saar player's ground forces from that planet and place them on a planet controlled by the Saar player.\nThen return this card to the Saar player."
       },
 
-    "image": "../images/winnu.PNG"
-
-
+    "image": "require('../assets/winnu.png')"
   },
 
   "5": {
@@ -166,9 +158,7 @@
         "ability": "ACTION: Remove 1 token from the Muaat player's fleet pool and return it to his reinforcements. Then, gain your war sun unit upgrade technology card.\nThen, return this card to the Muaat player."
       },
 
-    "image": "Twilight/races/images/winnu.PNG"
-
-
+    "image": "require('../assets/winnu.png')"
   }
 
 

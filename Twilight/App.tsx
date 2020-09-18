@@ -13,6 +13,7 @@ import {CreateMenu} from './screens/create/CreateMenu';
 import {RandomRaceOptionsScreen} from './screens/random_race/RandomRaceOptionsScreen';
 import {RaceLoreListScreen} from './screens/race_lore/RaceLoreListScreen';
 import { RandomRaceScreen } from './screens/random_race/RandomRaceScreen';
+import {RaceDetailScreen} from "./screens/race_lore/RaceDetailScreen";
 
 
 declare const global: {HermesInternal: null | {}};
@@ -39,6 +40,8 @@ function App() {
         <Stack.Screen name="RandomRaceOptionsScreen" component={RandomRaceOptionsScreen} />
         <Stack.Screen name="RandomRaceScreen" component={RandomRaceScreen} />
         <Stack.Screen name="RaceLoreListScreen" component={RaceLoreListScreen} />
+        <Stack.Screen name="RaceDetailScreen" component={RaceDetailScreen} />
+
 
       </Stack.Navigator>
     </NavigationContainer>

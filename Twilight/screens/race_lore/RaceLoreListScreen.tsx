@@ -24,13 +24,15 @@ export function RaceLoreListScreen(this: any, {navigation: navigation}) {
   }, []);
 
   const racePressed = (raceId: number) => {
+
     console.log('Displaying info about Race, ', raceId);
-    navigation.navigate('RaceLoreListScreen', {raceId: raceId});
+    navigation.navigate('RaceDetailScreen', {raceId: raceId});
   };
 
-  const renderRaces = (item: unknown) => {
+  // .bind(this,...) is needed to prevent the function being called on render of screen. Binds the function to the action
+  const renderRaces = (item: number) => {
     return (
-      <TouchableOpacity onPress={racePressed}>
+      <TouchableOpacity onPress={racePressed.bind(this,item.item.id)}>
         <Image
           race={item.item}
           source={item.item.image}
