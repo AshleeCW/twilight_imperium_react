@@ -1,4 +1,5 @@
 import {RaceModel} from '../../models/RaceModel';
+import lore from '../../races/race_lore.json';
 
 //Function for the vanilla races
 export function getCoreRaceList(): RaceModel[] {
@@ -54,6 +55,9 @@ export function getWinnu(): RaceModel {
     require('../../assets/winnu.png'),
     false,
   );
+}
+export function getRaceLore(id: number): string {
+  return lore[id];
 }
 export function getArborec(): RaceModel {
   return new RaceModel(

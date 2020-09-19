@@ -1,16 +1,16 @@
 import {
-  Button,
+  Button, Dimensions,
   Image,
-  ImageBackground,
+  ImageBackground, ScrollView, StyleSheet,
   Text,
-  TextInput,
   View,
 } from 'react-native';
-
+import { Component } from 'react';
 import React, {useEffect, useState} from 'react';
 import {backs, globalStyles} from '../../styles/global';
-import {getCoreRaceList, getRaceByID} from '../services/race_service';
+import {getCoreRaceList, getRaceByID, getRaceLore, getWinnuLore} from '../services/race_service';
 import {RaceModel} from '../../models/RaceModel';
+import Panel from 'react-native-panel';
 
 // @ts-ignore
 export function RaceDetailScreen({route, navigation: navigation}) {
@@ -24,14 +24,30 @@ export function RaceDetailScreen({route, navigation: navigation}) {
     const fetchedRace: RaceModel = getRaceByID(id);
     setRace(fetchedRace);
   }, []);
+  const width = Dimensions.get('window').width;
 
   return (
     <ImageBackground
       source={require('../../assets/space_background_reduced_v1.png')}
       style={globalStyles.background}>
       <View style={globalStyles.RandomRaceForm}>
-        <Text>{race?.name}</Text>
+        <Image source={race?.image} style={{height: width/3, width:width/3}}/>
+        <Text>Faction: {race?.name}</Text>
+        <Text>Homeworld: {race?.homeWorld}</Text>
       </View>
+
+      {/*<ScrollView*/}
+      {/*    contentContainerStyle={styles.contentContainerStyle}>*/}
+      {/*    <Text>{getRaceLore(race?.id)}</Text>*/}
+
+      {/*</ScrollView>*/}
     </ImageBackground>
   );
 }
+
+const styles = StyleSheet.create({
+  contentContainerStyle: {
+    paddingTop: 30,
+    paddingBottom: 20,
+  },
+})

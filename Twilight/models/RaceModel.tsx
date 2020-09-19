@@ -1,3 +1,5 @@
+import {getRaceLore} from "../screens/services/race_service";
+
 export class RaceModel {
 
     id: number;
