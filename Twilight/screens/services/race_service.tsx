@@ -37,6 +37,11 @@ export function getPoKRaces(): RaceModel[] {
   let raceList: RaceModel[] = [];
 }
 
+export function randomIntFromInterval(min, max) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 export function getRaceByID(id: number): RaceModel {
   let raceList: RaceModel[] = getCoreRaceList();
   for (let i = 0; i < raceList.length; i++) {

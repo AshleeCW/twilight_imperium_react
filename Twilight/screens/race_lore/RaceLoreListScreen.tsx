@@ -24,7 +24,6 @@ export function RaceLoreListScreen(this: any, {navigation: navigation}) {
   }, []);
 
   const racePressed = (raceId: number) => {
-
     console.log('Displaying info about Race, ', raceId);
     navigation.navigate('RaceDetailScreen', {raceId: raceId});
   };
