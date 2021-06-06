@@ -21,7 +21,7 @@ import {RaceModel} from '../../models/RaceModel';
 
 // @ts-ignore
 export function RandomRaceOptionsScreen({route, navigation: navigation}) {
-  const [numberOfPlayers, setNumberOfPlayers] = useState(0);
+  const [numberOfPlayers, setNumberOfPlayers] = useState(1);
   const [pokExpansion, setPoKExpansion] = useState(false);
   const [raceList, setRaceList] = useState<RaceModel[]>([]);
 

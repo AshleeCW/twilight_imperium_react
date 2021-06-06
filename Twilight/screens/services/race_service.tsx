@@ -1,5 +1,11 @@
 import {RaceModel} from '../../models/RaceModel';
 import lore from '../../races/race_lore.json';
+import {
+  getGravityDrive,
+  getMagenDefenseGrid,
+  getPlasmaScoring,
+  getSarweenTools,
+} from './tech_service';
 
 //Function for the vanilla races
 export function getCoreRaceList(): RaceModel[] {

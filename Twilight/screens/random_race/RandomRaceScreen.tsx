@@ -1,5 +1,4 @@
 import {
-  Button,
   Dimensions,
   FlatList,
   ImageBackground,
@@ -8,15 +7,12 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {globalStyles} from '../../styles/global';
-import races from '../../races/core_races.json';
 import {RaceCard} from '../../components/RaceCard';
 import {RaceModel} from '../../models/RaceModel';
-import {getCoreRaceList} from '../services/race_service';
-import {Image} from 'react-native-elements';
+
 // @ts-ignore
 export function RandomRaceScreen(this: any, {route, navigation: navigation}) {
-  // const {numberOfPlayers} = route.params;
-  // const {pokExpansion} = route.params;
+
 
   const [raceList, setRaceList] = useState<RaceModel[]>([]);
   const playerCount = route.params.PLAYER_COUNT;
@@ -26,26 +22,8 @@ export function RandomRaceScreen(this: any, {route, navigation: navigation}) {
     setRaceList(races);
   }, [races]);
 
-
   //TODO number of players must be less than max number of available races
 
-  // function randomIntFromInterval(min, max) {
-  //   // min and max included
-  //   return Math.floor(Math.random() * (max - min + 1) + min);
-  // }
-
-  // const setRaceListToPlayCount = () => {
-  //   //   for (let i = 0; i < playerCount; i++) {
-  //   let rand = randomIntFromInterval(1, raceList.length);
-  //   //     let chosenRace = raceList[rand];
-  //   //     // @ts-ignore
-  //   //     generatedRaceList().push(chosenRace);
-  //   //   }
-  //
-  //   while (raceList.length > playerCount) {
-  //
-  //   }
-  // };
 
   const racePressed = (raceId: number) => {
     console.log('Displaying info about Race, ', raceId);

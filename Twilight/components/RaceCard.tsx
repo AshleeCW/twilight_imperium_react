@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Text, Button, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {RaceModel} from '../models/RaceModel';
 import {Card, Image} from 'react-native-elements';
-import images from '../races/c'
+import images from '../races/c';
 
 export function RaceCard(props: any) {
   RaceCard.prototype = {
@@ -21,15 +21,9 @@ export function RaceCard(props: any) {
       style={style.card}
       testID="inviteCard"
       onPress={cardPressed}>
-
       <Card testID="raceCard">
-
         <View>
-          <Image
-
-              source={props.race.image}
-              style={style.image}
-          />
+          <Image source={props.race.image} style={style.image} />
           <Text style={style.text} testID="raceName">
             {props.race.name}
           </Text>
@@ -37,11 +31,13 @@ export function RaceCard(props: any) {
           <Text style={style.text} testID="raceWorld">
             {props.race.homeWorld}
           </Text>
+
+          <Text style={style.text} testID="tech">
+            {props.race.tech}
+          </Text>
         </View>
 
-        <View style={style.updateButtons} testID="detailButtons">
-
-        </View>
+        <View style={style.updateButtons} testID="detailButtons" />
       </Card>
     </TouchableOpacity>
   );
@@ -53,21 +49,21 @@ const style = StyleSheet.create({
     height: 100,
   },
   card: {
-    alignSelf:"baseline",
-    width: "99.9%",
+    alignSelf: 'baseline',
+    width: '99.9%',
     padding: 0,
     alignContent: 'center',
   },
   text: {
-    position: "relative",
+    position: 'relative',
     top: -85,
-    textAlign: "right",
+    textAlign: 'right',
     fontSize: 18,
     margin: 5,
     color: 'black',
   },
   updateButtons: {
-    position: "relative",
+    position: 'relative',
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'space-around',

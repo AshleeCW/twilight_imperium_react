@@ -16,7 +16,7 @@ export function TitleScreen({navigation: navigation}) {
           onPress={() => navigation.navigate('RandomRaceOptionsScreen')}
         />
         <Button
-          title={'Create'}
+          title={'Technology'}
           onPress={() => navigation.navigate('CreateMenu')}
         />
         <Button
