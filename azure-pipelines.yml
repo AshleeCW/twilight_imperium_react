@@ -32,3 +32,4 @@ steps:
     --detect.project.name="ADO-TI-React"
     --detect.project.version.name="1.0"
     --detect.tools="DETECTOR,SIGNATURE_SCAN"
+    
