@@ -1,0 +1,34 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+
+#detect
+- task:SynopsysDetectTask@8
+  displayName: 'Detect on TI-React'
+  continueOnError: true
+  inputs:
+    Products: BD
+    BlackDuckService: 'us1a-sup-hub-williamson-test2.nprd.sig.synopsys.com'
+    DetectFolder: .
+    DetectArguments: 
+    --detect.project.name="ADO-TI-React"
+    --detect.project.version.name="1.0"
+    --detect.tools="DETECTOR,SIGNATURE_SCAN"
